@@ -2,10 +2,10 @@
 Charte couleur: Bleu #0065FC, Bleu clair #DEEBFF, Gris #F2F2F2 
 Break-points: Mobile < 768px, 768 <= Tablette <= 991, 991px < Ordinateur */
 
-/*couleur pour test */
-header{
+/*couleurs et paramètres pour test */
+/*header{
     background-color: red;
-}
+}*/
 
 .search{
     background-color: rosybrown;
@@ -22,15 +22,15 @@ header{
 img{
     max-width: 250px;
 }
-
-/*.footer_box div{
-    background-color: skyblue;
-}*/
-
-/* fin couleur pour test */
+/* fin couleurs et paramètres pour test */
+@font-face {
+    font-family: 'Raleway';
+    src: url('polices/Raleway-VariableFont_wght.ttf') format(truetype);
+}
 
 body{
     margin: 0px;
+    font-family: 'Raleway', Arial, sans-serif;
 }
 
 a{
@@ -45,6 +45,77 @@ header, .search, .result, .activities, .footer_box{
 
 .lodging, .popular{
     background-color: #F2F2F2;
+}
+
+header
+{
+    height: 81px; /* 85px */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+}
+
+.search{
+    margin-top: 0;
+}
+
+.header_title{
+    display: none;
+}
+
+.header_logo{
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header_logo__img{
+    width: 94px;
+}
+
+.header_nav{
+    width: 324px;
+    display:flex;
+    margin-right: 0px;
+}
+
+.header_nav_box__button{
+    width: 162px;
+}
+
+.header_button_subscrib{
+   width: 96px; /* 6.7% */
+}
+
+.header_nav_box__button, .header_button_subscrib__link{
+    display: block;
+    height: 63px; /* 85px */
+    background-color: #fff;
+    transition: background-color 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header_button_subscrib__link{
+    font-weight: bold;
+    color: #0065FC;
+}
+
+.header_nav_box__button--active{
+    color: #0065FC;
+    border-top: solid 2px #0065FC;
+    height: 61px;
+}
+
+.header_nav_box__button:hover, .header_button_subscrib__link:hover{
+    background-color: #0065FC;
+    color: #fff;
+    border-top: solid 2px #fff;
+    height: 61px;
 }
 
 footer{
