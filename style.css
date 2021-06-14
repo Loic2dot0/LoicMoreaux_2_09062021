@@ -49,7 +49,7 @@ header, .search, .result, .activities, .footer_box{
 
 header
 {
-    height: 81px; /* 85px */
+    height: 81px;
     margin-bottom: 10px;
     display: flex;
     justify-content:space-between;
@@ -72,8 +72,8 @@ header
     justify-content: flex-end;
 }
 
-.header_logo__img{
-    width: 94px;
+.header_logo__link, .header_logo__img{
+    width: 96px;
 }
 
 .header_nav{
@@ -87,12 +87,12 @@ header
 }
 
 .header_button_subscrib{
-   width: 96px; /* 6.7% */
+   width: 96px;
 }
 
 .header_nav_box__button, .header_button_subscrib__link{
     display: block;
-    height: 63px; /* 85px */
+    height: 81px;
     background-color: #fff;
     transition: background-color 1s;
     display: flex;
@@ -100,22 +100,19 @@ header
     justify-content: flex-end;
 }
 
+.header_nav_box__button span, .header_button_subscrib__link span{
+    margin-bottom: 18px;
+}
+
 .header_button_subscrib__link{
     font-weight: bold;
     color: #0065FC;
 }
 
-.header_nav_box__button--active{
+.header_nav_box__button:hover, .header_button_subscrib__link:hover{
     color: #0065FC;
     border-top: solid 2px #0065FC;
-    height: 61px;
-}
-
-.header_nav_box__button:hover, .header_button_subscrib__link:hover{
-    background-color: #0065FC;
-    color: #fff;
-    border-top: solid 2px #fff;
-    height: 61px;
+    height: 79px;
 }
 
 footer{
