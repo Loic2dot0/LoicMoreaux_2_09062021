@@ -33,21 +33,23 @@
             <p>En plein centre ville ou en pleine nature</p>
             <form method="POST" action="#">
                 <div class="search_button">
-                    <label for="location"><i class="fas fa-map-marker-alt"></i></label>
-                    <input type="text" name="location" id="location" placeholder="Marseille, France"/>
-                    <button>Rechercher</button>
+                    <label for="location" class="search_button__label"><i class="fas fa-map-marker-alt"></i></label>
+                    <input type="text" name="location" id="location" placeholder="Marseille, France" class="search_button__input"/>
+                    <button class="search_button__button">Rechercher</button>
                 </div>
 
-                <div class="filter">
-                    <p>Filtres</p>
-                    <button type="button" name="economic"><i class="fas fa-money-bill-wave"></i> Économique</button>
-                    <button type="button" name="family"><i class="fas fa-child"></i> Familial</button>
-                    <button type="button" name="romantic"><i class="fas fa-heart"></i> Romantique</button>
-                    <button type="button" name="pets"><i class="fas fa-dog"></i> Animaux autorisés</button>
+                <div class="search_filter">
+                    <p>
+                        Filtres
+                        <button type="button" name="economic" class="search_filter__button"><i class="fas fa-money-bill-wave"></i> Économique</button>
+                        <button type="button" name="family" class="search_filter__button"><i class="fas fa-child"></i> Familial</button>
+                        <button type="button" name="romantic" class="search_filter__button"><i class="fas fa-heart"></i> Romantique</button>
+                        <button type="button" name="pets" class="search_filter__button"><i class="fas fa-dog"></i> Animaux autorisés</button>
+                    </p>
                 </div>
             </form>
 
-            <p><i class="fas fa-info"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+            <p class="search__info"><i class="fas fa-info"></i> Plus de 500 logements sont disponibles dans cette ville</p>
         </section>
 
         <div class="result">

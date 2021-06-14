@@ -3,14 +3,6 @@ Charte couleur: Bleu #0065FC, Bleu clair #DEEBFF, Gris #F2F2F2
 Break-points: Mobile < 768px, 768 <= Tablette <= 991, 991px < Ordinateur */
 
 /*couleurs et paramètres pour test */
-/*header{
-    background-color: red;
-}*/
-
-.search{
-    background-color: rosybrown;
-}
-
 .result{
     background-color: sandybrown;
 }
@@ -43,10 +35,11 @@ header, .search, .result, .activities, .footer_box{
     margin:auto;
 }
 
-.lodging, .popular{
-    background-color: #F2F2F2;
+button{
+    cursor: pointer;
 }
 
+/* header */
 header
 {
     height: 81px;
@@ -54,10 +47,6 @@ header
     display: flex;
     justify-content:space-between;
     text-align: center;
-}
-
-.search{
-    margin-top: 0;
 }
 
 .header_title{
@@ -114,7 +103,95 @@ header
     border-top: solid 2px #0065FC;
     height: 79px;
 }
+/* fin header */
 
+/* section .search */
+.search{
+    margin-top: 0;
+}
+
+.search_button{
+    display: flex;
+    line-height: 52px;
+}
+
+.search_button__label, .search_button__input, .search_button__button{
+    font-size: 1.2em;
+}
+
+.search_button__label{
+    width: 52px;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+    background-color: #F2F2F2;
+}
+
+.search_button__input{
+    width: 235px;
+    border: none;
+    border-top: solid 1px #F2F2F2;
+    border-bottom: solid 1px #F2F2F2;
+    border-radius: 0;
+}
+
+.search_button__button{
+    width: 135px;
+    background-color: #0065FC;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    border: none;
+}
+
+.search_filter p{
+    display: flex;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.search_filter__button{
+    background-color: #fff;
+    border: solid 2px #F2F2F2;
+    border-radius: 25px;
+    padding: 0 20px 0 0;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.search_filter__button .fas{
+    color: #0065FC;
+    background-color: #DEEBFF;
+    display: inline-block;
+    line-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: -2px 10px -2px -2px;
+}
+
+.search_filter__button:hover{
+    background-color: #DEEBFF;
+    border-color: #DEEBFF;
+}
+
+.search__info .fa-info{
+    display: inline-block;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #0065FC;
+    border: solid 2px #F2F2F2;
+    border-radius: 50%;
+    font-size: 0.9em;
+}
+/* fin section .search */
+
+/* div .result */
+.lodging, .popular{
+    background-color: #F2F2F2;
+}
+/*fin div .result */
+
+/* footer */
 footer{
     width: 100%;
     margin:auto;
