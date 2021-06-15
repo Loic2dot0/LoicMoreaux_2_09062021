@@ -192,7 +192,6 @@ header
 /* div .result */
 .result{
     display: flex;
-    justify-content: space-between;
 }
 
 .lodging, .popular{
@@ -202,19 +201,18 @@ header
 }
 
 .lodging{
-    flex: 2;
     margin-right: 40px;
 }
 
 .popular{
-    flex: 1;
+    width: 31%;
+    padding-bottom: 0;
 }
-
 
 .lodging_boxcard{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px 40px;
+    grid-gap: 25px 40px;
     grid-auto-rows: 200px;
     overflow: hidden;
 }
@@ -222,7 +220,9 @@ header
 .lodging_card{
     background-color: #fff;
     padding: 5px;
+    margin-bottom: 5px;
     border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .lodging_card__link{
@@ -249,10 +249,6 @@ header
     font-size: 0.7em;
 }
 
-.popular img{
-    width: 100%;;
-}
-
 .lodging_card__title, .lodging_card__price, .lodging_card__rating {
     margin-left: 10px;
 }
@@ -261,6 +257,57 @@ header
 {
     font-weight: bold;
     font-size: 1.2em;
+}
+
+/*popular */
+.popular_logo{
+    float:right;
+    font-size: 1.5em;
+    margin-bottom: -5px;
+}
+
+.popular_boxcard{
+    clear: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular_card{
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.popular_card__link{
+    display: flex;
+    height: 134px;
+}
+
+.popular_card__img{
+    flex:1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content :center;
+    align-items:center;
+    border-radius: 20px 0 0 20px;
+}
+
+.popular_card__text{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popular_card__title, .popular_card__price, .popular_card__rating{
+    margin: 10px 0 0 20px;
+}
+
+.popular_card__price{
+    flex: 1;
 }
 /*fin div .result */
 
