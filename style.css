@@ -26,6 +26,14 @@ h1, h2, h3, strong, b{
     font-weight: bold;
 }
 
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
 header, .search, .result, .activities, .footer_box{
     width: 93%;
     margin:auto;
@@ -41,6 +49,14 @@ button{
 
 .fa-star--blue{
     color: #0065FC;
+}
+
+.header_nav_box__button, .header_button_subscrib, .search_button__location a, .search_button__button{
+    transition: 0.5s;
+}
+
+.search_button__location:hover>a, .search_button__button:hover, .activities_card:hover{
+    transform: scale(1.02);
 }
 
 /* header */
@@ -84,7 +100,6 @@ header
 }
 
 .header_nav_box__button, .header_button_subscrib{
-    display: block;
     height: 5.5vw;
     border-top: solid 2px transparent;
     background-color: #fff;
@@ -104,24 +119,30 @@ header
 /* fin header */
 
 /* section .search */
-.search{
-    margin-top: 0;
-}
-
 .search_button{
     display: flex;
     line-height: 52px;
 }
 
 .search_button__label, .search_button__input, .search_button__button{
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-.search_button__label{
+.search_button__location{
     width: 52px;
     border-radius: 15px 0 0 15px;
     text-align: center;
     background-color: #F2F2F2;
+}
+
+.search_button__location a{
+    display: block;
+    border-radius: 15px 0 0 15px;
+}
+
+.search_button__button, .search_button__location:hover>a{
+    background-color: #0065FC;
+    color: #fff;
 }
 
 .search_button__input{
@@ -134,26 +155,27 @@ header
 
 .search_button__button{
     width: 135px;
-    background-color: #0065FC;
-    color: #fff;
     border-radius: 0 15px 15px 0;
     border: none;
 }
 
-.search_filter p{
-    display: inline-block;
-    line-height: 50px;
-    font-weight: bold;
+.search_button__button:hover{
+    background-color: #F2F2F2;
+    color: #000;
 }
 
 .search_filter__button{
     background-color: #fff;
-    border: solid 2px #F2F2F2;
+    border: solid 3px #F2F2F2;
     border-radius: 25px;
     padding: 0 20px 0 0;
     margin-left: 25px;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+}
+
+.search_filter{
+    margin: 2.8vw auto;
 }
 
 .search_filter__button .fas{
@@ -163,7 +185,7 @@ header
     line-height: 50px;
     width: 50px;
     border-radius: 50%;
-    margin: -2px 10px -2px -2px;
+    margin: -3px 10px -3px -3px;
 }
 
 .search_filter__button:hover{
@@ -179,12 +201,13 @@ header
     color: #0065FC;
     border: solid 2px #F2F2F2;
     border-radius: 50%;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 /* fin section .search */
 
 /* div .result */
 .result{
+    margin-top: 2.8vw;;
     display: flex;
 }
 
@@ -327,10 +350,6 @@ header
     border-radius: 20px;;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
-}
-
-.activities_card:hover{
-    transform: scale(1.02);
 }
 
 .activities_card--height01{
