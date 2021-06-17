@@ -171,7 +171,7 @@ header
     padding: 0 20px 0 0;
     margin-left: 25px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .search_filter{
@@ -214,66 +214,68 @@ header
 .lodging, .popular{
     background-color: #F2F2F2;
     border-radius: 20px;
-    padding: 30px 40px;
 }
 
 .lodging{
-    margin-right: 40px;
+    flex:1;
+    margin-right: 2.8vw;
 }
 
 .popular{
-    width: 31%;
-    padding-bottom: 0;
+    width: 29vw;
+}
+
+.lodging>*, .popular>*{
+    margin:2.8vw;
 }
 
 .lodging_boxcard{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px 40px;
-    grid-auto-rows: 200px;
-    overflow: hidden;
+    grid-gap: 2vw;
+    grid-auto-rows: 14vw;
 }
 
 .lodging_card{
     background-color: #fff;
-    padding: 5px;
-    margin-bottom: 5px;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.lodging_card__link{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin:0;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;    
+}
+
+.lodging_card *{
+    margin: 0;
 }
 
 .lodging_card__img{
-    height: 114px;
-    border-radius: 15px 15px 0 0;
+    height: 8vw;
+    object-fit: cover;
+    object-position: 50% 50%;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content :center;
+    border-radius: 15px 15px 0 0;
 }
 
-.lodging_card img{
-   width: 100%;   
+.lodging_card__title{
+font-size: 1rem;
+}
+
+.lodging_card>*:not(:first-child){
+    margin-left: 0.8vw;
 }
 
 .lodging_card__rating{
-    font-size: 0.7em;
-}
-
-.lodging_card__title, .lodging_card__price, .lodging_card__rating {
-    margin-left: 10px;
+    font-size: 0.7rem;
 }
 
 .lodging_more
 {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 /*popular */
@@ -381,8 +383,8 @@ header
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    border-radius: 20px 20px 0 0;
     overflow: hidden;
+    border-radius: 20px 20px 0 0;
 }
 
 .activities_card__figure figcaption{
