@@ -5,7 +5,7 @@ Break-points: Mobile < 768px, 768 <= Tablette <= 991, 991px < Ordinateur */
 /**{
     outline: solid 1px red;
 }
-/* fin for dev */
+/* end for dev */
 
 @font-face {
     font-family: 'Raleway';
@@ -46,10 +46,9 @@ button{
 /* header */
 header
 {
-    height: 81px;
-    margin-bottom: 10px;
+    height: 5.6vw;
+    margin-bottom: 3vw;
     display: flex;
-    justify-content:space-between;
     text-align: center;
 }
 
@@ -58,7 +57,7 @@ header
 }
 
 .header_logo{
-    width: 100%;
+    flex:1;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -70,41 +69,37 @@ header
 }
 
 .header_nav{
-    width: 324px;
+    width: 25%;
     display:flex;
-    margin-right: 0px;
 }
 
 .header_nav_box__button{
-    width: 162px;
+    width: 50%;
 }
 
 .header_button_subscrib{
-   width: 96px;
+    width: 8%;
+    font-weight: bold;
+    color: #0065FC;
 }
 
-.header_nav_box__button, .header_button_subscrib__link{
+.header_nav_box__button, .header_button_subscrib{
     display: block;
-    height: 81px;
+    height: 5.5vw;
+    border-top: solid 2px transparent;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.header_nav_box__button span, .header_button_subscrib__link span{
-    margin-bottom: 18px;
+.header_nav_box__button span, .header_button_subscrib span{
+    margin-bottom: 1.2vw;
 }
 
-.header_button_subscrib__link{
-    font-weight: bold;
-    color: #0065FC;
-}
-
-.header_nav_box__button:hover, .header_button_subscrib__link:hover{
+.header_nav_box__button:hover, .header_button_subscrib:hover{
     color: #0065FC;
     border-top: solid 2px #0065FC;
-    height: 79px;
 }
 /* fin header */
 
