@@ -34,7 +34,7 @@ h3{
     font-size: 1.2rem;
 }
 
-header, .search, .result, .activities, .footer_box{
+body>*:not(footer){
     width: 93%;
     margin:auto;
 }
@@ -45,18 +45,33 @@ button{
 
 .fa-star{
     color: #F2F2F2;
+    font-size: 0.7rem;
 }
 
 .fa-star--blue{
     color: #0065FC;
 }
 
-.header_nav_box__button, .header_button_subscrib, .search_button__location a, .search_button__button{
+.effect_transition{
     transition: 0.5s;
 }
 
-.search_button__location:hover>a, .search_button__button:hover, .activities_card:hover{
+.effect_zoom:hover{
     transform: scale(1.02);
+}
+
+.card{
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+}
+
+.card_img{
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden;
 }
 
 /* header */
@@ -124,8 +139,9 @@ header
     line-height: 52px;
 }
 
-.search_button__label, .search_button__input, .search_button__button{
+.search_button>*{
     font-size: 1.2rem;
+    border: none;
 }
 
 .search_button__location{
@@ -147,7 +163,6 @@ header
 
 .search_button__input{
     width: 235px;
-    border: none;
     border-top: solid 1px #F2F2F2;
     border-bottom: solid 1px #F2F2F2;
     border-radius: 0;
@@ -156,7 +171,6 @@ header
 .search_button__button{
     width: 135px;
     border-radius: 0 15px 15px 0;
-    border: none;
 }
 
 .search_button__button:hover{
@@ -207,7 +221,7 @@ header
 
 /* div .result */
 .result{
-    margin-top: 2.8vw;;
+    margin: 2.8vw auto;
     display: flex;
 }
 
@@ -226,7 +240,7 @@ header
 }
 
 .lodging>*, .popular>*{
-    margin:2.8vw;
+    margin: 2.8vw 2.8vw 0 2.8vw;
 }
 
 .lodging_boxcard{
@@ -237,15 +251,10 @@ header
 }
 
 .lodging_card{
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin:0;
-    padding: 5px;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 0.9rem;    
 }
 
 .lodging_card *{
@@ -254,9 +263,6 @@ header
 
 .lodging_card__img{
     height: 8vw;
-    object-fit: cover;
-    object-position: 50% 50%;
-    overflow: hidden;
     border-radius: 15px 15px 0 0;
 }
 
@@ -268,10 +274,6 @@ font-size: 1rem;
     margin-left: 0.8vw;
 }
 
-.lodging_card__rating{
-    font-size: 0.7rem;
-}
-
 .lodging_more
 {
     font-weight: bold;
@@ -281,7 +283,7 @@ font-size: 1rem;
 /*popular */
 .popular_logo{
     float:right;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: -5px;
 }
 
@@ -292,42 +294,31 @@ font-size: 1rem;
 }
 
 .popular_card{
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 10vw;
     margin-bottom: 30px;
-}
-
-.popular_card__link{
     display: flex;
-    height: 134px;
 }
 
 .popular_card__img{
-    flex:1;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content :center;
-    align-items:center;
+    width: 8.8vw;
     border-radius: 15px 0 0 15px;
 }
 
-.popular_card__img img{
-    height: 100%;
-    min-width: 100%;
-}
-
 .popular_card__text{
-    flex:2;
+    flex:1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0.8vw 0 0 0.8vw;
 }
 
-.popular_card__title, .popular_card__price, .popular_card__rating{
-    margin: 10px 0 0 20px;
+.popular_card__text>*{
+    margin: 0;
+}
+
+.popular_card__title{
+    font-size: 1rem;
+    margin-bottom: 0.8vw;
 }
 
 .popular_card__price{
@@ -351,7 +342,6 @@ font-size: 1rem;
     height: 100%;
     border-radius: 20px;;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
 }
 
 .activities_card--height01{
@@ -381,9 +371,6 @@ font-size: 1rem;
 .activities_card__figure img{
     width:100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    overflow: hidden;
     border-radius: 20px 20px 0 0;
 }
 
@@ -399,22 +386,17 @@ font-size: 1rem;
 
 /* footer */
 footer{
-    width: 100%;
-    margin:auto;
     background-color: #F2F2F2;
-    padding-bottom: 10px;
-}
-
-.footer_box{
+    padding: 1vw 3.5vw;
     display: flex;
     justify-content: space-between;
 }
 
-.footer_box div{
-    width: 30%;
+.footer_card{
+    width:30%;
 }
 
-.footer_box ul{
+.footer_card ul{
     list-style: none;
     padding: 0;
 }
