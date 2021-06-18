@@ -1,8 +1,8 @@
 /* Police: Raleway
 Charte couleur: Bleu #0065FC, Bleu clair #DEEBFF, Gris #F2F2F2 
-Break-points: Mobile < 768px, 768 <= Tablette <= 991, 991px < Ordinateur */
+Break-points: Mobile < 768px, 768 <= Tablette < 1280px, 1280px <= Ordinateur */
 /* for dev */
-/**{
+/*{
     outline: solid 1px red;
 }
 /* end for dev */
@@ -74,10 +74,14 @@ button{
     overflow: hidden;
 }
 
+.link_classic:hover{
+    text-decoration: underline;
+}
+
 /* header */
 header
 {
-    height: 5.6vw;
+    /*height: 5.6vw;*/
     margin-bottom: 3vw;
     display: flex;
     text-align: center;
@@ -100,22 +104,22 @@ header
 }
 
 .header_nav{
-    width: 25%;
     display:flex;
 }
 
 .header_nav_box__button{
-    width: 50%;
+    width: 162px;
 }
 
 .header_button_subscrib{
-    width: 8%;
+    width: 100px;
     font-weight: bold;
     color: #0065FC;
 }
 
 .header_nav_box__button, .header_button_subscrib{
     height: 5.5vw;
+    min-height: 45px;
     border-top: solid 2px transparent;
     background-color: #fff;
     display: flex;
@@ -235,26 +239,25 @@ header
     margin-right: 2.8vw;
 }
 
-.popular{
-    width: 29vw;
-}
-
 .lodging>*, .popular>*{
     margin: 2.8vw 2.8vw 0 2.8vw;
 }
 
 .lodging_boxcard{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2vw;
-    grid-auto-rows: 14vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .lodging_card{
+    width: 16vw;
+    height: 13.1vw;
+    margin:0 0 2vw 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin:0;
+    
 }
 
 .lodging_card *{
@@ -278,6 +281,7 @@ font-size: 1rem;
 {
     font-weight: bold;
     font-size: 1.2rem;
+    margin-top: 1vw;
 }
 
 /*popular */
@@ -294,7 +298,9 @@ font-size: 1rem;
 }
 
 .popular_card{
+    width: 23.9vw;
     height: 10vw;
+    margin:auto;
     margin-bottom: 30px;
     display: flex;
 }
@@ -399,4 +405,61 @@ footer{
 .footer_card ul{
     list-style: none;
     padding: 0;
+}
+
+@media screen and (max-width:1279px){
+
+    .search_filter__button{
+        margin-bottom: 1.5vw;
+    }
+    
+    .result{
+        flex-direction: column-reverse;
+    }
+
+    .lodging, .popular{
+        width: 100%;
+    }
+   
+    .lodging{
+        padding-bottom: 2vw;
+    }
+
+    .popular_boxcard{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .popular{
+        margin-bottom: 3vw;
+    }
+
+    .popular_card{
+        width: 27vw;
+        height: 11.3vw;
+        margin: 0 0 2.8vw 0;
+    }
+
+    .lodging_card{
+        width: 27vw;
+        height: 22vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .lodging_card__img{
+        height:12.5vw;
+    }   
+
+    
+}
+
+@media screen and (max-width:768px){
+    body{
+        color: red;
+        width: 100%;
+        margin: auto;
+    }
+
 }
