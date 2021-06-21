@@ -573,6 +573,10 @@ footer{
         align-content: flex-end;
     }
     
+    .lodging_boxcard{
+        margin: 5.3vw 0;
+    }
+
     .popular_card, .lodging_card, .activities_card{
         box-sizing: border-box;
         width: 100%;
@@ -618,5 +622,10 @@ footer{
 
     footer{
         padding: 0;
+    }
+
+    .footer_card{
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
