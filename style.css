@@ -171,6 +171,10 @@ header
     border-radius: 0;
 }
 
+.search_button__button--ico{
+    display: none;
+}
+
 .search_button__button{
     width: 135px;
     border-radius: 0 15px 15px 0;
@@ -427,7 +431,6 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        flex-wrap: wrap;
     }
 
     .popular{
@@ -437,6 +440,7 @@ footer{
     .popular_card{
         width: 27vw;
         height: 11.3vw;
+        min-height: 110px;
         margin: 0 0 2.8vw 0;
     }
 
@@ -448,26 +452,108 @@ footer{
 
     .lodging_card__img{
         height:12.5vw;
-    }   
-
+    }
     
+    .activities_boxcard{
+        flex-direction: row;
+        height:auto;
+    }
+
+    .activities_boxcard>*{
+        height: 29vw;
+        width: 30vw;
+        margin-bottom: 2vw;
+    }    
+
+    .activities_card__figure figcaption{
+        line-height: 56px;
+        font-size: 0.9rem;
+    }
 }
 
-@media screen and (max-width:768px){
-    body>*:not(footer), .footer_card{
+@media screen and (max-width:767px){
+    body>*:not(.search){
         width: 100%;
+    }
+
+    header{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 6.7vw;
     }
 
     .header_logo{
         flex:0;
+        order:1;
+        margin-left: 5.3vw;
+    }
+
+    .header_button_subscrib{
+        order:2;
+        margin-right: 5.3vw;
+    }
+
+    .header_nav{
+        order:3;
+        width: 100vw;
     }
 
     .header_nav_box__button{
-        width: 100px; /*test */
+        width: 50%;
+        border-bottom: solid 0.8vw #F2F2F2;
+    }
+
+    .header_nav_box__button--active{
+        border-bottom: solid 0.8vw #0065FC;
+        color: #0065FC;
+    }
+
+    .search, .popular>*, .lodging, .activities>*, .footer_card{
+        margin: 5.3vw;
+        width:auto;
+    }
+
+    .search_button__input{
+        flex:1;
+    }
+
+    .search_button__button{
+        width: 52px;
+        border-radius: 15px;
+        margin-left: -30px;
+    }
+
+    .search_button__button--ico{
+        display:inline;
+    }
+
+    .search_button__button--text{
+        display:none;
+    }
+
+    .search_filter{
+        display: flex;
+        flex-wrap: wrap;  
     }
 
     .search_filter b{
-        display: block;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .search_filter__button{
+        margin: auto auto 12px 0;
+        padding-right: 15px;;
+        font-size: 1rem;
+    }
+
+    .search__info i{
+        float:left;
+        margin-right: 12px;
+    }
+
+    .search__info{
+        min-height: 30px;
     }
 
     .result>*{
@@ -478,16 +564,19 @@ footer{
         background-color: #fff;
     }
 
-    .lodging_boxcard, .popular_boxcard, footer{
-        flex-direction: column;
+    .lodging>*{
+        margin: 0;
     }
 
-    .lodging_boxcard, .popular_boxcard, .activities_boxcard{
-        margin: 2.5vw; /*2.5vw */
+    .lodging_boxcard, .popular_boxcard, footer, .activities_boxcard{
+        flex-direction: column;
+        align-content: flex-end;
     }
     
     .popular_card, .lodging_card, .activities_card{
-        width: 89.3vw;
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 6vw;
     }
 
     .popular_card{
@@ -495,18 +584,39 @@ footer{
     }
 
     .popular_card__img{
-        width: 33.9vw;
+        min-width: 33.9vw;
+        flex:1;
+    }
+
+    .popular_card__text{
+        max-width: 160px;
+        margin: 5.3vw 5.3vw 3.7vw 5.3vw;
     }
 
     .lodging_card{
         height: 53.3vw;
+        justify-content: space-between;
+    }
+
+    .lodging_card>*:not(:first-child){
+        margin: 0.5vw 4.5vw;
+    }
+
+    .lodging_card:last-child{
+        margin-bottom: 2.9vw;
     }
 
     .lodging_card__img{
-        height: 30.4vw;
+        min-height: 30.4vw;
+        margin-bottom: 2vw;
+        flex: 1;
     }
-
-    .activities_card, .activities_card--height01, .activities_card--height02, .activities_card--height03, .activities_card--height04{
+    
+    .activities_boxcard>*{
         height: 50.7vw;
+    }    
+
+    footer{
+        padding: 0;
     }
 }
